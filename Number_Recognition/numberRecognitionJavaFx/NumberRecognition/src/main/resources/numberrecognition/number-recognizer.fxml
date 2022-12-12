@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Defining visual layout of the NumberRecognizer application -->
+<!-- Importing important libraries -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<!-- Defining controller file name in `package_name.file_name` format -->
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="numberrecognition.NumberController"
+            prefHeight="600.0" prefWidth="600.0">
+    <!-- Defining virtual box at the top of the screen/stage with title `Image` and dropdown options to save and clear the scene-->
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Image Options">
+                    <MenuItem text="SAVE" onAction="#onSave"/>
+                    <MenuItem text="CLEAR" onAction="#onClear" />
+                </Menu>
+            </MenuBar>
+            <!-- Defining a checkbox in horizontal box in the toolbar at the top -->
+            <ToolBar>
+                <HBox alignment="CENTER" spacing="5">
+                    <CheckBox fx:id="eraser" text="Eraser" />
+                </HBox>
+            </ToolBar>
+            <VBox alignment="CENTER">
+                <Button fx:id="Predict" text="PREDICT" onAction="#onPredict"/>
+            </VBox>
+
+            <Label fx:id="welcomeText"/>
+        </VBox>
+    </top>
+    <!-- Defining canvas in the middle of the scene with its height and width -->
+    <center>
+        <Canvas fx:id="canvas" width="600" height="600" />
+    </center>
+</BorderPane>
