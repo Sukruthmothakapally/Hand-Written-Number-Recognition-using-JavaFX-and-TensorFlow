@@ -60,7 +60,7 @@ public class NumberController {
             graphics.drawImage(tmp, 0, 0, null);
             graphics.dispose();
             //Saving the snapshot in png format with filename `number.png`
-            ImageIO.write(scaledImg, "png", new File("number.png"));
+            ImageIO.write(scaledImg, "png", new File("resources/number.png"));
 
         }
         //Printing error if snapshot cannot be captured using catch block
@@ -81,7 +81,7 @@ public class NumberController {
 
         try{
             // Start the Python script as a new process
-       ProcessBuilder builder= new ProcessBuilder("python", "D:\\Python_problems\\Number_recognition_tensorflow\\Number_recognition_tensorflow.py" );
+       ProcessBuilder builder= new ProcessBuilder("python", "resources/Number_recognition_tensorflow.py" );
        process=builder.start();
 
         }catch(Exception e) {
