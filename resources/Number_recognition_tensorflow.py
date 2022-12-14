@@ -42,7 +42,7 @@ model.fit(x_train , y_train , epochs = 1) #epochs  - number of training iteratio
 loss , accuracy = model.evaluate(x_test , y_test)
 
 #to read the saved image in a grey scale
-img=cv2.imread("resources\number.png")[:,:,0] #reading the image using computer vision cv2. we don't require color of image, hence getting only b/w [:,:,0]
+img=cv2.imread("resources/number.png")[:,:,0] #reading the image using computer vision cv2. we don't require color of image, hence getting only b/w [:,:,0]
 
 #reshape the image to 28 * 28 pixel as tensorflow understands only 28*28 pixel format images
 img2 = np.reshape(img, (-1, 28, 28))
